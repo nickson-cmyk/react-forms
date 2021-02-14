@@ -1,5 +1,9 @@
 import {combineReducers} from"redux"
-import {users} from"./reducer"
-export default combineReducers={
-    users
-}
+import payment from"./paymentReducer"
+import address from"./addressReducer"
+ const rootReducer =combineReducers({
+    payment: payment,
+    address: address
+});
+
+export default rootReducer;

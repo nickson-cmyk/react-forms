@@ -17,6 +17,8 @@ import AddressForm from"./AddressForm"
 import Checkout from"./Checkout"
 // import Axios from  "axios"
 
+import Form from '../formik/formikContainer';
+
 
 
 function App() {
@@ -33,7 +35,7 @@ function App() {
  
   return (
     <>
-      <Checkout></Checkout>
+      <Form/>
   </>
    
   )

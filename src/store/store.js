@@ -1,7 +1,7 @@
 import { compose, createStore, applyMiddleware } from 'redux';
-import { logger } from 'redux-logger';
+// import { logger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
-import {users} from '../reducer/reducer';
+import combineReducers from '../reducer/combine';
 import {userAction } from "../constant/constant"
 // import { constantValue } from '../constant/constant';
 
@@ -10,13 +10,13 @@ const rootReducer = (state, payload) => {
         payload = undefined
     }
 
-    return users(state, payload)
+    return combineReducers(state, payload)
 }
 
 const enhancer = compose(
     applyMiddleware(
         thunkMiddleware,
-        logger
+        // logger
     ),
     // persistState(),
   )

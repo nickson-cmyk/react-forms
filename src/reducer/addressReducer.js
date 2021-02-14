@@ -1,6 +1,7 @@
 import { userAction } from "../constant/constant";
 
-export const initialState = {}
+export const initialState = {
+}
     // list: [
         // {user:'dinesh'},
         // {username: 'naveen'},
@@ -10,15 +11,10 @@ export const initialState = {}
     // list1:[]
 
 
-export function users(state = initialState, action) {
+export default function payment(state = initialState, action) {
     console.log("data ===", action.data)
     switch (action.type) {
-        case userAction.ADDRESS_DATA:
-            return  {
-                ...state,
-                 ...action.data
-            };
-            case userAction.PAYMENT:
+            case "ADDRESS":
                 return {
                     // list1: [
                         ...state,
